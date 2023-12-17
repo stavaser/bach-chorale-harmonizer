@@ -52,11 +52,18 @@ python3 main.py --xmlfile=./path/to/file.xml --verbose=False --population_size=1
 
 ## Configuration
 
-You can modify several parameters in the main() function:
+| Weight Key               | Default Value | Description |
+|--------------------------|---------------|-------------|
+| `eval_valid_progression` | 15.0          | Prioritizes the validity of chord progressions. Higher values emphasize adherence to traditional harmonic progression rules. |
+| `eval_parallel_octaves`  | 1.0           | Penalizes parallel octaves. Increasing this value reduces the occurrence of parallel octaves in the harmonization. |
+| `eval_parallel_fifths`   | 1.0           | Penalizes parallel fifths. A higher value discourages the use of parallel fifths. |
+| `eval_parallel_unisons`  | 1.0           | Penalizes parallel unisons. Increasing this weight avoids parallel unisons in the harmonization. |
+| `eval_tritones`          | 10.0          | Limits the usage of tritones, often considered dissonant. A higher weight will reduce tritones in the harmonization. |
+| `eval_repeated_bass`     | 1.0           | Addresses the repetition of the bass note. Higher values discourage excessive repetition of the same bass note. |
+| `eval_voice_ranges`      | 1.0           | Ensures that each voice stays within its comfortable singing range. |
+| `eval_voice_closeness`   | 1.0           | Evaluates the closeness of voices. Promotes more spacing between the voices with higher values. |
+| `eval_voice_crossing`    | 1.0           | Penalizes instances where voices cross each other. Higher values discourage voice crossing. |
+| `eval_intervalic_quality`| 1.0           | Examines the intervalic quality between the Soprano line and a generated Bass line. The score is determined based on a probability matrix created from analyzing hundreds of Bach chorales, evaluating every possible interval between Soprano and Bass lines. |
 
-- `population_size`: number of harmonizations in each generation.
-- `generation`s: number of evolutionary cycles.
-- `weights`: dictates the importance of different musical aspects in fitness evaluation.
-- `encourage_diversity`: switches to tournament parent selection
-- `use_intervalic_qualities`: use the probability matrix generated from hundreds of Bach chorales in evaluation process
 
+Adjust these weights to influence the style and characteristics of the generated chorale.
