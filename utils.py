@@ -86,7 +86,7 @@ def preprocess_chorale(chorale):
 
 
 def save_score(score):
-    timestamp = datetime.now().strftime("%b-%d-%I:%M:%S")
+    timestamp = datetime.now().strftime("%b-%d-%I-%M-%S")
     filename = f"JSB-chorale-{timestamp}"
     folder_name = filename
 
