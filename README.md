@@ -51,6 +51,7 @@ python3 main.py --xmlfile=./path/to/file.xml --verbose=False --population_size=1
 ```
 
 ## Configuration
+Adjust these weights to influence the style and characteristics of the generated chorale.
 
 | Weight Key               | Default Value | Description |
 |--------------------------|---------------|-------------|
@@ -66,4 +67,3 @@ python3 main.py --xmlfile=./path/to/file.xml --verbose=False --population_size=1
 | `eval_intervalic_quality`| 1.0           | Examines the intervalic quality between the Soprano line and a generated Bass line. The score is determined based on a probability matrix created from analyzing hundreds of Bach chorales, evaluating every possible interval between Soprano and Bass lines. |
 
 
-Adjust these weights to influence the style and characteristics of the generated chorale.
